@@ -1,10 +1,26 @@
-final int GAME_START = 0;                //state
+final int GAME_START = 0;                //State
 final int GAME_RUN = 1;
 final int GAME_LOSE = 2;
-PImage    treasure,HP,enemy,fighter;     //PImage
-PImage    bg1,bg2,bg3,start1,start2,end1,end2;
-int       bg1x,bg2x,bg3x,tsx,tsy,eny,enx;//int
-int       HPx,start,end,startGamex,startGamey,state = GAME_START;
+
+
+//Pimg
+PImage  treasure;
+PImage HP;
+PImage enemy;
+PImage fighter;    
+PImage bg1;
+PImage bg2;
+PImage bg3;
+PImage start1;
+PImage start2;
+PImage end1;
+PImage end2;
+
+//int
+int bg1x,bg2x,bg3x;
+int tsx,tsy;
+int eny,enx;
+int    HPx,start,end,startGamex,startGamey,state = GAME_START;
 float     x ,y ,speed = 15,T;               //FT control
 boolean   upPressed    = false;
 boolean   downPressed  = false;
