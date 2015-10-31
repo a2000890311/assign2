@@ -109,7 +109,7 @@ switch (state){                               // game state
 if(enx > x-60 && enx < x+60 && eny > y-60 && eny < y+60){ // en & HP
    enx = 0;
    eny = (int)random(30, 410);
-  HPx -=20;    
+  HPx -=40;    
        }
 if(HPx<=4){
    HPx = 20;  
@@ -121,7 +121,7 @@ if(HPx<=4){
 if(tsx >= x-60 && tsx < x+60 && tsy > y-60 && tsy < y+60){//ts and hp
   tsx = (int)random(15, 340);
   tsy = (int)random(30, 440);
-   HPx +=10;    
+   HPx +=20;    
        }
      if(HPx >= 200){
      HPx = 200;    
@@ -130,15 +130,23 @@ if(tsx >= x-60 && tsx < x+60 && tsy > y-60 && tsy < y+60){//ts and hp
   case  GAME_LOSE:                                        // TH page
     image(end2,end,0);
        if(mouseX>startGamex && mouseX<startGamex +230 && mouseY>startGamey-80 && mouseY<startGamey -50 ){
-    image(end1,end,0);
-       }
-       if(mouseX>startGamex && mouseX<startGamex +230 && mouseY>startGamey-80 && mouseY<startGamey -50 && mouseButton == LEFT ){
+         image(end1,end,0);
+          if( mouseButton == LEFT ){
          state = GAME_RUN;
        }
+       }
+       
+       
+       
   
    break;   
   }
 }
+
+
+
+
+
 void keyPressed() {
     if (key == CODED) {                                   // FT control
       switch (keyCode) {
